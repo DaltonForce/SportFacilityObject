@@ -1,0 +1,15 @@
+<form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+    <div class="container">
+    <div>
+      <input matInput placeholder="Username" formControlName="username" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.username.errors }"  />
+    </div>
+    <div>
+      <input matInput placeholder="Password" type="password" formControlName="password" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.password.errors }"/>
+    </div>
+    <div>
+      <button type="submit" id="submit">Login</button>
+    </div>
+
+    <div id="questionMark">Don't have account yet? <a routerLink="/register">Register here</a></div>
+  </div>
+</form>

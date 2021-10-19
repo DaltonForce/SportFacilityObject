@@ -1,0 +1,22 @@
+<p>Tutaj trzeba bedzie zrobić tabelę i podpiąć to pod dane z backendu</p>
+
+
+<table id="users">
+    <tr>
+        <th *ngFor = "let column of headers">
+            {{column}}
+        </th>
+    </tr>
+
+    <tr *ngFor = "let user of usersDetails">
+        <td>{{ user.id }}</td>
+        <td>{{ user.age }}</td>
+        <td>{{ user.username }}</td>
+        <td>{{ user.password }}</td>
+        <td>{{ user.email }}</td>
+        <td>{{ user.role }}</td>
+        <td *ngIf="user.role == 'USER'"><button id="admin">Change to ADMIN</button></td>
+        <td *ngIf="user.role == 'ADMIN'"><button id="user">Change to USER</button></td>
+    </tr>
+
+</table>

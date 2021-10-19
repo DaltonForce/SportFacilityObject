@@ -1,0 +1,21 @@
+<table id="reservations">
+    <tr>
+        <th *ngFor = "let column of headers">
+            {{column}}
+        </th>
+    </tr>
+
+    <tr *ngFor = "let reservation of reservationsDetails">
+        <td>{{ reservation.id }}</td>
+        <td>{{ reservation.facilityId }}</td>
+        <td>{{ reservation.username }}</td>
+        <td>{{ reservation.reservationTime | date:'short' }}</td>
+        <td>{{ reservation.reservationFinish | date:'short'}}</td>
+        <td *ngIf="reservation.statusId == 1" style="color: blue">Pending...</td>
+        <td *ngIf="reservation.statusId == 2" style="color: green">Accepted</td>
+        <td *ngIf="reservation.statusId == 3" style="color: red">Declined</td>
+        <td *ngIf="reservation.statusId == 1"><button id="accept" >Accept</button><button id="decline">Decline</button></td> <!-- (click)="updateStatus()" -->
+        <td *ngIf="reservation.statusId == 2"><button id="decline">Change to Decline</button></td>
+        <td *ngIf="reservation.statusId == 3"><button id="accept">Change to Accepted</button></td>
+    </tr>
+</table>

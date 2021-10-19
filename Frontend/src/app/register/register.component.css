@@ -1,0 +1,87 @@
+form {
+    display: flex;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+    padding: 20px;
+    background: #eee;
+    border-radius: 20px;
+}
+
+input#username, input#email, input#age, input#password, input#cpassword {
+    outline: 0;
+    font-size: 20px;
+    padding: 5px 10px;
+    margin: 5px;
+    min-width: 300px;
+}
+
+button#submit {
+    margin: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+
+.center {
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .spinner{
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  
+  .inline-form-field {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  
+  mat-card {
+    width: 70%;
+    border-radius: 25px;
+    margin: auto;
+  }
+  .btn-link{
+  margin: 25px;
+  }
+  .btn-primary{
+    margin: 25px;
+  }
+  
+  mat-card:hover {
+    box-shadow: 0 10px 6px -6px grey;
+  }
+  
+  mat-form-field {
+    width: 200px !important;
+  }
+  
+  .textarea {
+    display: block;
+    width: 100%;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+  }
+  

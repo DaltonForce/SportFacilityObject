@@ -1,0 +1,17 @@
+<div class="footballImage"><img src="../../assets/football3.jpg"></div>
+
+
+<table id="football">
+    <tr>
+        <th *ngFor = "let column of headers">
+            {{column}}
+        </th>
+    </tr>
+
+    <tr *ngFor = "let reservation of reservationsDetails">
+        <td *ngIf = "reservation.facilityId == 3 && reservation.statusId == 2">{{ reservation.id }}</td>
+        <td *ngIf = "reservation.facilityId == 3 && reservation.statusId == 2">{{ reservation.username }}</td>
+        <td *ngIf = "reservation.facilityId == 3 && reservation.statusId == 2">{{ reservation.reservationTime }}</td>
+        <td *ngIf = "reservation.facilityId == 3 && reservation.statusId == 2">{{ reservation.reservationFinish }}</td>
+    </tr>
+</table>

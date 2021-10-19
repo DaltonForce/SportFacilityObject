@@ -1,0 +1,48 @@
+#container{
+    background-color: black;
+}
+
+.basketballImage{
+    filter: brightness(80%);
+}
+
+#basketball {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 30%;
+  }
+  
+  #basketball td, #basketball th {
+    border: 1px solid #ddd;
+    padding: 8px;
+  }
+  
+  #basketball tr:nth-child(even){background-color: #f2f2f2;}
+  
+  #basketball tr:hover {background-color: #ddd;}
+  
+  #basketball th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #6e332a;
+    color: white;
+  }
+
+.container{
+  float:left;
+  width: 30%;
+}
+
+.bg{
+
+  width:100%;
+  height: 70%;
+  position: relative;
+}
+
+.container_img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}

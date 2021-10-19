@@ -1,0 +1,36 @@
+<div class="bg">
+  <img src="../../../assets/basketball2.png" class="container_img" />
+<form [formGroup]="reservationForm" (ngSubmit)="onSubmit()">
+    <div class="container">
+      <h2>Reservation for basketball</h2>
+    <div>
+      <input placeholder="Reservation Time" formControlName="reservationTime" class="form-control" type="datetime-local"
+              [ngClass]="{ 'is-invalid': submitted && f.reservationTime.errors }">
+    </div>
+    <div>
+      <input placeholder="Reservation Finish" formControlName="reservationFinish" class="form-control" type="datetime-local"
+              [ngClass]="{ 'is-invalid': submitted && f.reservationFinish.errors }">
+    </div>
+    <div>
+      <button mat-raised-button color="accent" [disabled]="loading" class="btn btn-primary">Zarejestruj</button>
+    </div>
+  </div>
+</form> 
+
+<table id="basketball">
+    <tr>
+        <th *ngFor = "let column of headers">
+            {{column}}
+        </th>
+    </tr>
+
+    <tr *ngFor = "let reservation of reservationsDetails">
+
+        <td *ngIf = "reservation.facilityId == 2 && reservation.statusId == 2">{{ reservation.id }}</td>
+        <td *ngIf = "reservation.facilityId == 2 && reservation.statusId == 2">{{ reservation.username }}</td>
+        <td *ngIf = "reservation.facilityId == 2 && reservation.statusId == 2">{{ reservation.reservationTime }}</td>
+        <td *ngIf = "reservation.facilityId == 2 && reservation.statusId == 2">{{ reservation.reservationFinish }}</td>
+
+    </tr>
+</table>
+</div>

@@ -1,0 +1,33 @@
+<div id="grad1">          
+    <div id="homeButton"><a class="navbar-item" routerLink="/"><img src="../../assets/home.png"></a></div>
+    <div id="userPanel">
+        <div class="nav-item ml-0 ml-md-auto" ngbDropdown #dropdown="ngbDropdown">
+            <!--<a class="nav-link dropdown-toggle" ngbDropdownToggle>
+              <i class="fa fa-user mr-1"></i>
+              <span ><img src="../../assets/user.png"></span>
+            </a>-->
+            <a *ngIf="!loggedIn" routerLink="/login">LOGIN</a>
+            <a *ngIf="loggedIn" (click)="logout()"> LOGOUT</a>
+            <a *ngIf="loggedIn && isAdmin" routerLink="/admin">= ADMIN PANEL =</a>
+            <a *ngIf="loggedIn && isUser" routerLink="/user">= USER PANEL =</a>
+        
+            
+
+        <div ngbDropdownMenu class="dropdown-menu">
+            <!-- *ngIf="{{ role.id == 1 }}" -->
+            <a  id="adminOnly" routerLink="/admin" class="dropdown-item">
+              <i class="fa fa-user-circle" aria-hidden="true"></i> Admin Panel
+            </a>
+            <a  routerLink="/login" class="dropdown-item">
+              <i class="fa fa-key" aria-hidden="true"></i> Login
+            </a>
+            <a  class="dropdown-item">
+              <i class="fa fa-key" aria-hidden="true"><a routerLink = "/"></a></i> Wyloguj
+            </a>
+            <a  routerLink="/register" class="dropdown-item">
+              <i class="fa fa-group" aria-hidden="true"></i> Rejestracja
+            </a>
+          </div>
+    </div>
+</div>
+

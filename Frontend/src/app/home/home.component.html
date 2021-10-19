@@ -1,0 +1,16 @@
+<div id="SLIDE_BG">
+  <div id="middleButton">
+    <a routerLink="/login" class="neonButton" *ngIf="!loggedIn">Let's Begin</a>
+  </div>
+  <div id="middleButton">
+    <a routerLink="/object" class="neonButton" *ngIf="loggedIn && !isAdmin">Book</a>
+  </div>
+  <div id="middleButton">
+    <a routerLink="/admin" class="neonButton" *ngIf="loggedIn && isAdmin">Admin Panel</a>
+  </div>
+</div>
+<div id="mapContainer">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2539.023850966575!2d23.05659641591225!3d50.47789969326747!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x472351781eed858f%3A0xe913309d96f553b0!2sOrlik%202012!5e0!3m2!1spl!2spl!4v1630202043954!5m2!1spl!2spl" width="100%" height="400" style="border:0; bottom: 0; position: absolute;" allowfullscreen="" loading="lazy"></iframe>
+</div>
+
+  

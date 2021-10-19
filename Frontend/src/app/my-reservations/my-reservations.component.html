@@ -1,0 +1,19 @@
+<table id="reservations">
+    <tr>
+        <th *ngFor = "let column of headers">
+            {{column}}
+        </th>
+    </tr>
+
+    <tr *ngFor = "let reservation of reservationsDetails">
+        <td *ngIf="reservation.facilityId == 1" style="color: green">Tenis</td>
+        <td *ngIf="reservation.facilityId == 2" style="color: red">Basketball</td>
+        <td *ngIf="reservation.facilityId == 3" style="color: blue">Football</td>
+        <!-- <td *ngIf="reservation.username == 'u4'">{{ reservation.username }}</td>  TODO: this.user -->
+        <td>{{ reservation.reservationTime | date:'short' }}</td>
+        <td>{{ reservation.reservationFinish | date:'short'}}</td>
+        <td *ngIf="reservation.statusId == 1" style="background-color: blue; color:white">Pending...</td>
+        <td *ngIf="reservation.statusId == 2" style="background-color: green; color:white">Accepted</td>
+        <td *ngIf="reservation.statusId == 3" style="background-color: red; color:white">Declined</td>
+    </tr>
+</table>

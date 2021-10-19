@@ -1,0 +1,31 @@
+
+
+<div id="container">
+    <div class="tenisImage"><img src="../../assets/tenis2.jpg"></div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+<body>
+  <div id="calendar"></div>
+</body>
+
+
+<table id="tenis">
+    <tr>
+        <th *ngFor = "let column of headers">
+            {{column}}
+        </th>
+    </tr>
+
+    <tr *ngFor = "let reservation of reservationsDetails">
+
+        <td *ngIf = "reservation.facilityId == 1 && reservation.statusId == 2">{{ reservation.id }}</td>
+        <td *ngIf = "reservation.facilityId == 1 && reservation.statusId == 2">{{ reservation.username }}</td>
+        <td *ngIf = "reservation.facilityId == 1 && reservation.statusId == 2">{{ reservation.reservationTime }}</td>
+        <td *ngIf = "reservation.facilityId == 1 && reservation.statusId == 2">{{ reservation.reservationFinish }}</td>
+
+    </tr>
+</table>
+
+
+

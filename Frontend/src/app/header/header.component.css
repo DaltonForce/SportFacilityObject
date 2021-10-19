@@ -1,0 +1,26 @@
+h5{
+    background-color: skyblue;
+    padding: 20px;
+    margin: 0;
+    position: fixed;
+}
+
+#homeButton{
+    display: flex;
+    justify-content: left;
+    margin-left: 20px;
+}
+
+#grad1{
+    height: 80px;
+    width: 100%;
+    background-color: #1fc8db;
+    background-image: linear-gradient(140deg, #cc0000 0%, #BC70A4 45%, #cc0000 90%);
+    color: white;
+    opacity: 0.95;
+}
+
+#userPanel{
+    padding-right: 30px;
+    float: right;
+}

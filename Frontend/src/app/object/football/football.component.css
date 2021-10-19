@@ -1,0 +1,24 @@
+
+
+#football {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 30%;
+  }
+  
+  #football td, #football th {
+    border: 1px solid #ddd;
+    padding: 8px;
+  }
+  
+  #football tr:nth-child(even){background-color: #f2f2f2;}
+  
+  #football tr:hover {background-color: #ddd;}
+  
+  #football th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #2a336e;
+    color: white;
+  }

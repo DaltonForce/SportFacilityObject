@@ -1,0 +1,28 @@
+<form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+    <div class="container">
+      <h2>Register Here</h2>
+    <div>
+      <input placeholder="Username" type="text" formControlName="username" class="form-control"
+              [ngClass]="{ 'is-invalid': submitted && f.username.errors }">
+    </div>
+    <div>
+      <input placeholder="Email" type="email" required formControlName="email" class="form-control"
+              [ngClass]="{ 'is-invalid': submitted && f.email.errors }">
+    </div>
+    <div>
+      <input placeholder="Password" type="password" required formControlName="password" class="form-control"
+              [ngClass]="{ 'is-invalid': submitted && f.password.errors }">
+    </div>
+    <div>
+      <input placeholder="Age" formControlName="age" class="form-control"
+              [ngClass]="{ 'is-invalid': submitted && f.age.errors }" min="1" max="99">
+    </div>
+    <div>
+      <button mat-raised-button color="accent" [disabled]="loading" class="btn btn-primary">Register</button>
+    </div>
+  </div>
+</form> 
+
+
+
+
